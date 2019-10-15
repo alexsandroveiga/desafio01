@@ -22,7 +22,7 @@ function checkIdExists(req, res, next) {
   const project = projects.find(project => project.id == id);
 
   if (!project) {
-    return res.status(400).json({ error: 'Projeto não encontrado' });
+    return res.status(400).json({ error: 'Project does not exists' });
   }
 
   next(); 
